@@ -1,0 +1,6 @@
+{ 
+  "project_folder" : "/Users/jboucas/nf-kallisto-test" ,
+  "cutadapt_raw_data" : "/Users/jboucas/nf-kallisto-test/raw_data" ,
+  "sgRNA_size" : "30",
+  "upstreamseq" : "TGTGGAAAGGACGAAACACC" 
+}
