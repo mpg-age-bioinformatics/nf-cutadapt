@@ -35,7 +35,7 @@ process get_images {
 
 }
 
-process fastqc {
+process cutadapt {
   tag "${f}"
   stageInMode 'symlink'
   stageOutMode 'move'
@@ -74,5 +74,5 @@ workflow {
 
     data = channel.fromPath( "${params.cutadapt_raw_data}/*fastq.gz" )
     data = data.filter{ ! file("$it".replace("${params.cutadapt_raw_data}", "${params.project_folder}/${cutadapt_output}/") ).exists() }
-    fastqc( data, cutadapt_output )
+    cutadapt( data, cutadapt_output )
 }
