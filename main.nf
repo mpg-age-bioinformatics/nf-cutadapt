@@ -46,8 +46,8 @@ process cutadapt {
   
   script:
     """
-    mkdir -p /workdir/${cutadapt_output}
-    cutadapt -j ${task.cpus} --length ${params.sgRNA_size} -g ${params.upstreamseq} -o /workdir/${cutadapt_output}/${f} ${f}
+    mkdir -p ${params.project_folder}/${cutadapt_output}
+    cutadapt -j ${task.cpus} --length ${params.sgRNA_size} -g ${params.upstreamseq} -o ${params.project_folder}/${cutadapt_output}/${f} ${f}
     """
 }
 
