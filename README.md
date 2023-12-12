@@ -25,9 +25,7 @@ curl -J -O https://raw.githubusercontent.com/mpg-age-bioinformatics/nf-adapt/mai
 
 Run the workflow:
 ```
-RELEASE=1.0.0
-PROFILE=local
-nextflow run mpg-age-bioinformatics/nf-cutadapt -r ${RELEASE} -params-file params.json -profile ${PROFILE}
+nextflow run mpg-age-bioinformatics/nf-cutadapt -r 1.0.0 -params-file params.json
 ```
 
 ## Contributing
