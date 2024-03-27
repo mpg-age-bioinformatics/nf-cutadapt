@@ -36,9 +36,9 @@ process get_images {
 }
 
 process cutadapt {
-  tag "${f}"
   stageInMode 'symlink'
   stageOutMode 'move'
+  tag "${f}"
   
   input:
     path f
